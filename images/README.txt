@@ -5,7 +5,7 @@ Suggested files:
   - her-smile.jpg     → Used in the "Her Smile" section
   - fashion.jpg       → Used in the "My Fashion Queen" section
   - her-eyes.jpg      → Used in the "Look Into Her Eyes" heartbeat game
-  - us-1.jpg          → "You & Me" gallery — photo 1
+  -  	          → "You & Me" gallery — photo 1
   - us-2.jpg          → "You & Me" gallery — photo 2
   - us-3.jpg          → "You & Me" gallery — photo 3 (featured/wide)
   - us-4.jpg          → "You & Me" gallery — photo 4
