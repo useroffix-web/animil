@@ -836,9 +836,9 @@
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: 1fr 1fr;
       gap: 24px;
-      max-width: 900px;
+      max-width: 700px;
       width: 100%;
       padding: 0 12px;
     }
@@ -852,6 +852,10 @@
       border: 1px solid rgba(245, 199, 126, 0.1);
       transition: transform 0.5s ease, box-shadow 0.5s ease;
       cursor: default;
+    }
+
+    .gallery-card.landscape {
+      aspect-ratio: 4 / 3;
     }
 
     .gallery-card:hover {
@@ -919,19 +923,21 @@
       transform: translateY(0);
     }
 
-    /* Large feature card spans 2 columns */
+    /* Feature card — centered in its own row */
     .gallery-card.feature {
       grid-column: span 2;
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 4 / 3;
+      max-width: 480px;
+      justify-self: center;
     }
 
     @media (max-width: 600px) {
       .gallery-grid {
-        grid-template-columns: 1fr 1fr;
         gap: 14px;
+        max-width: 100%;
       }
       .gallery-card.feature {
-        grid-column: span 2;
+        max-width: 260px;
       }
       .gallery-caption {
         opacity: 1;
@@ -947,7 +953,7 @@
       }
       .gallery-card.feature {
         grid-column: span 1;
-        aspect-ratio: 3 / 4;
+        max-width: 100%;
       }
     }
 
@@ -1169,7 +1175,7 @@
     </p>
     <div class="player-wrapper fade-in fade-in-delay-2">
       <!-- PERSONALIZE: Replace the Spotify embed URL below with your own playlist -->
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1EJJ5qcOD8g8Ou?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3THXzzZvwndECDlhIxKyLe?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
   </section>
 
@@ -1184,32 +1190,32 @@
 
     <div class="gallery-grid">
 
-      <!-- PHOTO 1 -->
-      <div class="gallery-card fade-in fade-in-delay-1">
+      <!-- PHOTO 1 (landscape) -->
+      <div class="gallery-card landscape fade-in fade-in-delay-1">
         <img src="images/us-1.jpg" alt="Us together" />
         <div class="gallery-caption">days I cherish the most</div>
       </div>
 
-      <!-- PHOTO 2 -->
-      <div class="gallery-card fade-in fade-in-delay-2">
+      <!-- PHOTO 2 (landscape) -->
+      <div class="gallery-card landscape fade-in fade-in-delay-2">
         <img src="images/us-2.jpg" alt="Us together" />
         <div class="gallery-caption">With you, It feels like home</div>
       </div>
 
-      <!-- PHOTO 3 (FEATURE — wider) -->
-      <div class="gallery-card feature fade-in fade-in-delay-2">
+      <!-- PHOTO 3 (portrait) -->
+      <div class="gallery-card fade-in fade-in-delay-1">
         <img src="images/us-3.jpg" alt="Us together" />
         <div class="gallery-caption">My favorite place is next to you</div>
       </div>
 
-      <!-- PHOTO 4 -->
-      <div class="gallery-card fade-in fade-in-delay-1">
+      <!-- PHOTO 4 (portrait) -->
+      <div class="gallery-card fade-in fade-in-delay-2">
         <img src="images/us-4.jpg" alt="Us together" />
         <div class="gallery-caption">Every moment with you is precious</div>
       </div>
 
-      <!-- PHOTO 5 -->
-      <div class="gallery-card fade-in fade-in-delay-2">
+      <!-- PHOTO 5 (centered) -->
+      <div class="gallery-card feature fade-in fade-in-delay-1">
         <img src="images/us-5.jpg" alt="Us together" />
         <div class="gallery-caption">You make ordinary days feel unforgettable</div>
       </div>
